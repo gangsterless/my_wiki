@@ -2,7 +2,7 @@
 
 <img src="imgs/zyt_white.png" width = "200" height = "260" div align=right />
 
-目前就读于
+目前就读于武汉大学
 
 ## Commands
 
