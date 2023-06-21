@@ -152,7 +152,58 @@ $$
 <span class="arithmatex">\(\phi(x)\)</span> 来满足方程。解决这类方程的方法包括数值方法和解析方法。</p>
 <p>数值方法通常使用数值近似技术，将积分方程转化为离散形式，然后通过数值计算来近似求解。这些方法包括数值积分、数值迭代、数值优化等。</p>
 <p>解析方法则尝试通过一些特殊的数学技巧，如变换方法、特殊函数的性质和积分方程的特征来求解方程。这些方法通常需要依赖于方程的特殊性质和具体形式，例如分离变量、格林函数、特征值分解等。</p>
-<p>一类积分方程在应用中具有广泛的应用，包括物理学、工程学、数学分析、统计学、量子力学等领域。这些方程可以描述许多实际问题，例如电磁场分布、传热问题、声波传播、信号处理、图像重建等。解决一类积分方程可以帮助我们理解和解决这些实际问题。</p></div>
+<p>一类积分方程在应用中具有广泛的应用，包括物理学、工程学、数学分析、统计学、量子力学等领域。这些方程可以描述许多实际问题，例如电磁场分布、传热问题、声波传播、信号处理、图像重建等。解决一类积分方程可以帮助我们理解和解决这些实际问题。</p>
+<ul>
+<li>什么是 Nyström’s method?
+Nyström方法（Nyström's method）是一种用于数值求解积分方程的近似方法。它是根据瑞典数学家Åke Nyström的名字命名的。</li>
+</ul>
+<p>Nyström方法主要用于求解第二类Fredholm积分方程。它通过将积分方程中的积分项离散化，将积分转化为求和，从而将积分方程转化为一个线性方程组的求解问题。</p>
+<p>具体来说，Nyström方法使用一组节点（或称为采样点）来近似积分，然后通过数值积分公式（如梯形规则或辛普森规则）将积分项转化为对这些节点上函数值的求和。通过在适当的节点上选择合适的权重，可以得到近似方程组。</p>
+<p>这样，原始的积分方程问题就转化为求解线性方程组的问题。常见的求解线性方程组的方法（如LU分解、迭代法等）可以用于求解近似的线性方程组，从而得到积分方程的近似解。</p>
+<p>Nyström方法在数值分析和科学计算中被广泛应用，特别是在求解积分方程和边界值问题时。它具有计算效率高、数值稳定性好的优点，在实际问题中取得了良好的应用效果。</p>
+<ul>
+<li>什么是Galerkin space?</li>
+</ul>
+<p>Galerkin空间是一种在数值分析和数学物理领域中使用的概念，用于处理偏微分方程的数值逼近和解析性质。
+在有限元方法中，Galerkin空间是指由一组选定的试验函数（test functions）构成的函数空间。这些试验函数通常是由多项式函数或分段多项式函数构成的。通过在这个函数空间中寻找逼近解，我们可以将原始的偏微分方程转化为一个代数方程组，进而进行数值求解。
+Galerkin方法的基本思想是，选择试验函数空间中的一个函数作为近似解，并将其与方程的残差进行内积。通过使残差在试验函数空间中的内积为零，我们可以得到一个在数值上逼近原始方程解的方程。
+Galerkin空间的选择是通过考虑问题的特定性质和求解的要求来确定的。常见的Galerkin空间包括多项式空间、三角函数空间、分段多项式空间等。这些空间的选择取决于所研究问题的几何形状、边界条件以及所需的解的精度和光滑性。 
+总之，Galerkin空间是在有限元方法和其他数值方法中使用的一种函数空间概念，用于构建逼近解并求解偏微分方程。</p>
+<p>论文学习：</p>
+<p>Consider a Hilbert space <span class="arithmatex">\(\mathcal{H}\)</span> defined on a bounded domain <span class="arithmatex">\(\Omega\subset \R^m\)</span> discretized by <span class="arithmatex">\(n\)</span> grid points, and <span class="arithmatex">\(f\in \mathcal{H}\)</span>.  <span class="arithmatex">\(\mathbf{y}\in \R^{n\times d}\)</span> is the current latent representation for <span class="arithmatex">\(n&gt;d&gt;m\)</span> and full column rank. 
+<span class="arithmatex">\({Q}_h\subset \mathcal{Q}\subset \mathcal{H}\)</span> 
+and <span class="arithmatex">\({V}_h\subset\mathcal{V}\subset \mathcal{H}\)</span> are the latent approximation subspaces spanned by basis functions with the columns of 
+<span class="arithmatex">\(Q\)</span> and <span class="arithmatex">\(V\)</span> in \eqref{eq:attention-weights} as degrees of freedom, respectively, and <span class="arithmatex">\(0&lt;\dim {Q}_h=r\leq \dim{V}_h=d\)</span>. Let <span class="arithmatex">\(\mathfrak{b}(\cdot, \cdot): \mathcal{V}\times \mathcal{Q}\to \R\)</span> be a continuous bilinear form, and<br />
+if for any fixed <span class="arithmatex">\(q\in {Q}_h\)</span> the functional norm of <span class="arithmatex">\(\mathfrak{b}(\cdot, q)\)</span> is bounded below by <span class="arithmatex">\(c&gt;0\)</span>, then there exists  a learnable map <span class="arithmatex">\(g_{\theta}(\cdot)\)</span> that is the composition of the Galerkin-type attention operator  with an updated set of projection matrices <span class="arithmatex">\(\{W^Q, W^K, W^V\}\)</span>, and a pointwise universal approximator, such that for <span class="arithmatex">\(f_h\in {Q}_h\)</span> being the best approximation of <span class="arithmatex">\(f\)</span> in <span class="arithmatex">\(\|\cdot\|_{\mathcal{H}}\)</span> it holds:</p>
+<p>$$</p>
+<p>|f- g_{\theta}(\mathbf{y})|<em>{\mathcal{H}}
+\leq c^{-1} \min</em>{q\in {Q}<em>h} \max</em>{v\in {V}<em>h}
+\frac{|\mathfrak{b}(v,f_h - q)|}{|v|</em>{\mathcal{H}}}
++|f-f_h|_{\mathcal{H}}.
+$$</p>
+<p>我的疑问，这个除法项 <span class="arithmatex">\(（\frac{|\mathfrak{b}(v,f_h - q)|}{\|v\|_{\mathcal{H}}}）\)</span>是在做什么，我看不懂</p>
+<p>chatGPT回答：
+这个除法项 <span class="arithmatex">\(\frac{|\mathfrak{b}(v,f_h - q)|}{|v|_{\mathcal{H}}}\)</span> 是在计算一个误差项的相对大小。</p>
+<p>在这段话中，我们考虑了一个由 <span class="arithmatex">\(\mathcal{H}\)</span> 定义的 Hilbert 空间，该空间在有界域 <span class="arithmatex">\(\Omega \subset \mathbb{R}^m\)</span> 上离散化，由 <span class="arithmatex">\(n\)</span> 个网格点构成，其中 <span class="arithmatex">\(f \in \mathcal{H}\)</span>。<span class="arithmatex">\(\mathbf{y} \in \mathbb{R}^{n \times d}\)</span> 是当前的潜在表示，满足 <span class="arithmatex">\(n &gt; d &gt; m\)</span> 且具有满列秩。</p>
+<p><span class="arithmatex">\({Q}_h \subset \mathcal{Q} \subset \mathcal{H}\)</span> 和 <span class="arithmatex">\({V}_h \subset \mathcal{V} \subset \mathcal{H}\)</span> 是由基函数张成的潜在近似子空间，其中 <span class="arithmatex">\(Q\)</span> 和 <span class="arithmatex">\(V\)</span> 是权重矩阵的列作为自由度。这里 <span class="arithmatex">\(0 &lt; \dim {Q}_h = r \leq \dim {V}_h = d\)</span>。<span class="arithmatex">\(\mathfrak{b}(\cdot, \cdot): \mathcal{V} \times \mathcal{Q} \to \mathbb{R}\)</span> 是一个连续双线性形式。</p>
+<p>在这个背景下，除法项 <span class="arithmatex">\(\frac{|\mathfrak{b}(v,f_h - q)|}{|v|_{\mathcal{H}}}\)</span> 是计算一个误差项在相对尺度上的大小。其中 <span class="arithmatex">\(f_h \in {Q}_h\)</span> 是 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(|\cdot|_{\mathcal{H}}\)</span> 范数下的最佳逼近。这个除法项的目的是通过将误差项 <span class="arithmatex">\(\mathfrak{b}(v,f_h - q)\)</span> 与向量 <span class="arithmatex">\(v\)</span> 的范数进行归一化，来度量误差项相对于子空间 <span class="arithmatex">\(\mathcal{V}\)</span> 的大小。换句话说，它将误差项除以一个参考向量 <span class="arithmatex">\(v\)</span> 的范数，以便比较不同误差项的相对大小。</p>
+<p>这个除法项在不同的误差估计和逼近理论中常常出现，它用于衡量误差项与参考向量的比例，以提供关于误差的相对大小的信息。</p>
+<ul>
+<li>我还是不理解这里的连续双线性形式，以及这个小于等于为什么成立？</li>
+</ul>
+<p>在给定的文本中，我们有一个连续双线性形式 <span class="arithmatex">\(\mathfrak{b}(\cdot, \cdot): \mathcal{V} \times \mathcal{Q} \to \mathbb{R}\)</span>，其中 <span class="arithmatex">\(\mathcal{V}\)</span> 和 <span class="arithmatex">\(\mathcal{Q}\)</span> 是函数空间中的子空间。此外，我们假设对于任意固定的 <span class="arithmatex">\(q \in {Q}_h\)</span>，函数 <span class="arithmatex">\(\mathfrak{b}(\cdot, q)\)</span> 的泛函范数（functional norm）都有一个下界 <span class="arithmatex">\(c &gt; 0\)</span>，即 <span class="arithmatex">\(|\mathfrak{b}(\cdot, q)|{\mathcal{V'}} \geq c\)</span>，其中 <span class="arithmatex">\(\mathcal{V'}\)</span> 是 <span class="arithmatex">\(\mathcal{V}\)</span> 的对偶空间。</p>
+<p>根据这些假设，我们想要证明不等式 成立。</p>
+<p>不等式右侧的第一项是一个最优化问题，即在子空间 <span class="arithmatex">\({Q}_h\)</span> 中找到一个函数 <span class="arithmatex">\(q\)</span>，使得 <span class="arithmatex">\(\mathfrak{b}(v, f_h - q)\)</span> 取得最小值。这个项度量了真实解 <span class="arithmatex">\(f\)</span> 和 <span class="arithmatex">\({Q}_h\)</span> 中最优逼近 <span class="arithmatex">\(f_h\)</span> 之间的差异。</p>
+<ul>
+<li>为什么 <span class="arithmatex">\(h^2(V^TK)_{ij}=A(k_j,v_i)\)</span>？</li>
+</ul>
+<p>在给定的文本中，<span class="arithmatex">\(A(\cdot, \cdot)\)</span> 和 <span class="arithmatex">\(B(\cdot, \cdot)\)</span> 分别是连续的双线性形式（bilinear form）。我们可以将 <span class="arithmatex">\(A(\cdot, \cdot)\)</span> 表示为 <span class="arithmatex">\(A(u, v) = h^2\sum^n_{i=1}u(x_i)v(y_i)\)</span>，其中 <span class="arithmatex">\((u, v) \in \mathbb{K}_h \times \mathbb{V}_h\)</span>，<span class="arithmatex">\(x_i\)</span> 和 <span class="arithmatex">\(y_i\)</span> 是相应的位置坐标。</p>
+<p>另一方面，<span class="arithmatex">\(V\)</span> 和 <span class="arithmatex">\(K\)</span> 是列向量构成的矩阵，分别表示注意力机制中的值（value）和键（key）。假设 <span class="arithmatex">\(V = [v_1, v_2, \ldots, v_d]\)</span>，<span class="arithmatex">\(K = [k_1, k_2, \ldots, k_d]\)</span>，其中 <span class="arithmatex">\(v_i\)</span> 和 <span class="arithmatex">\(k_i\)</span> 分别是值空间和键空间中的列向量。</p>
+<p>现在考虑等式 <span class="arithmatex">\(h^2(V^TK)_{ij} = A(k_j,v_i)\)</span>。左侧是矩阵乘法的一项，可以展开为：</p>
+<p><span class="arithmatex">\(h^2(V^TK){ij} = h^2\sum{l=1}^d (V^T){il}K{lj} = h^2\sum_{l=1}^d V_{li}K_{lj} = h^2\sum_{l=1}^d v_{il}k_{lj}\)</span>。</p>
+<p>右侧是 <span class="arithmatex">\(A(k_j,v_i)\)</span> 的定义，代入 <span class="arithmatex">\(A(\cdot, \cdot)\)</span> 的表达式，我们得到：</p>
+<p><span class="arithmatex">\(h^2\sum_{l=1}^d v_{il}k_{lj} = h^2\sum^n_{m=1}k_j(x_m)v_i(y_m) = A(k_j,v_i)\)</span>。</p>
+<p>因此，<span class="arithmatex">\(h^2(V^TK)_{ij} = A(k_j,v_i)\)</span> 成立。这个等式的意义在于它将注意力机制中值和键之间的内积关系与双线性形式 <span class="arithmatex">\(A(\cdot, \cdot)\)</span> 相联系。</p></div>
             </div>
         </div>
 
