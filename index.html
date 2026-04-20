@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,80 +8,34 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
+        <title>Yuantong Zhang</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href=".">Yuantong Zhang</a>
 
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Yuantong Zhang's Personal Homepage</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="license/" class="nav-link">License</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">001</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="notes/001/001/" class="dropdown-item">001</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Neutral op</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="notes/neutral_op/001/" class="dropdown-item">GPT问答</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                        </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="license/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -89,18 +43,48 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#yuantong-zhangs-personal-homepage" class="nav-link">Yuantong Zhang's Personal Homepage</a>
+            <li class="nav-item" data-bs-level="2"><a href="#education" class="nav-link">Education</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#research-interests" class="nav-link">Research Interests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#research-and-project-experience" class="nav-link">Research and Project Experience</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#publications" class="nav-link">Publications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#awards-and-honors" class="nav-link">Awards and Honors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#standards-and-technical-contributions" class="nav-link">Standards and Technical Contributions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#patents" class="nav-link">Patents</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -109,127 +93,104 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="yuantong-zhangs-personal-homepage">Yuantong Zhang's Personal Homepage</h1>
-<p><img src="imgs/zhangyuantong.jpg" width = "200" height = "200" div align=right /></p>
-<p>I am currently a PhD student, and my advisor is Professor Zhenzhong Chen.</p>
-<h3 id="education">Education</h3>
-<p>2017 ~ 2021: Bachelor of Engineering in Computer Science and Technology, Wuhan University</p>
-<p>2021 ~ Present: PhD Candidate in Photogrammetry and Remote Sensing, Wuhan University</p>
-<h3 id="research-interests">Research interests</h3>
+<div class="home-header">
+  <h1>Yuantong Zhang (张圆通111)</h1>
+  <p class="subtitle">Ph.D. Candidate in Photogrammetry and Remote Sensing</p>
+  <p class="affiliation">School of Remote Sensing and Information Engineering, Wuhan University</p>
+  <p class="links">
+    <a href="mailto:yuantongzhang@whu.edu.cn">Email</a> |
+    <a href="https://zhenzhong-chen.github.io/">Advisor: Zhenzhong Chen</a> |
+    Wuhan University
+  </p>
+</div>
+
+<div class="home-hero">
+  <div class="home-copy">
+    <p>
+      I am a Ph.D. candidate at the School of Remote Sensing and Information Engineering,
+      Wuhan University, working in the Intelligent Information Processing Laboratory.
+      My research focuses on video and image processing, with particular interests in
+      video super-resolution, frame interpolation, low-light enhancement, and learned
+      image or video compression.
+    </p>
+  </div>
+  <div class="home-photo">
+    <img src="imgs/zhangyuantong.jpg" alt="Yuantong Zhang">
+  </div>
+</div>
+
+<hr />
+<h2 id="education">Education</h2>
 <ul>
-<li>Video and image processing (video frame interpolation, video super-resolution, low-light enhancement, etc.)</li>
+<li><strong>2021 - Present</strong>: Ph.D. Candidate, Photogrammetry and Remote Sensing, Wuhan University</li>
+<li><strong>2017 - 2021</strong>: B.Eng., Computer Science and Technology, Wuhan University</li>
+</ul>
+<h2 id="research-interests">Research Interests</h2>
+<ul>
+<li>Video super-resolution</li>
+<li>Video frame interpolation</li>
+<li>Low-light image enhancement</li>
+<li>Learned image compression</li>
 <li>Video compression</li>
 </ul>
-<h3 id="papers">Papers</h3>
+<h2 id="research-and-project-experience">Research and Project Experience</h2>
 <ul>
-<li>
-<p><strong>Yuantong Zhang</strong>, Zhenzhong Chen,:
-Continuous Space-Time Video Resampling with Invertible Motion Steganography. CVPR 2025 </p>
-</li>
-<li>
-<p>Weijie Bao <strong>Yuantong Zhang</strong>,  Jianghao Jia, Zhenzhong Chen, Shan Liu:
-Joint Reference Frame Synthesis and Post Filter Enhancement for Versatile Video Coding. JVCIR 2025</p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Huairui Wang, Han Zhu, Zhenzhong Chen:
-Optical Flow Reusing for High-Efficiency Space-Time Video Super Resolution. IEEE Trans. Circuits Syst. Video Technol. 33(5): 2116-2128 (2023)</p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen:
-Controllable Space-Time Video Super-Resolution via Enhanced Bidirectional Flow Warping. VCIP 2022</p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Daiqin Yang, Zhenzhong Chen, Wenpeng Ding:
-Continuous Space-Time Video Super-Resolution with Multi-stage Motion Information Reorganization. ACM
-Transactions on Multimedia Computing Communications and Applications. </p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Baoxin Teng, Daiqin Yang, Zhenzhong Chen, Haichuan Ma, Gang Li, Wenpeng Ding:
-Learning a Single Convolutional Layer Model for Low Light Image Enhancement.  IEEE Trans. Circuits Syst. Video Technol. early access 2024</p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Hanyou Zheng, Daiqin Yang, Zhenzhong Chen, Haichuan Ma, Wenpeng Ding:
-Space-Time Video Super-resolution with Neural Operator. CoRR abs/2404.06036 (2024)</p>
-</li>
-<li>
-<p><strong>Yuantong Zhang</strong>, Nianxiang Fu , et al. Learned Image Compression with Enhanced Dynamic Spatial Aggregation and Asymmetric Entropy model VCIP 2023</p>
-</li>
-<li>
-<p>Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, and Shan Liu:
-Deep Reference Frame Generation Method for VVC Inter Prediction Enhancement.  IEEE Trans. Circuits Syst. Video Technol. early access 2024</p>
-</li>
-<li>
-<p>Li, Yawei, et al. "NTIRE 2023 challenge on efficient super-resolution: Methods and results." CVPR workshop. 2023.</p>
-</li>
-<li>
-<p>Jie Yang, <strong>Yuantong Zhang</strong>, et al  An Efficient Method for Real-Time Image Exposure Correction VCIP 2023</p>
-</li>
-<li>
-<p>Wenhui Meng, <strong>Yuantong Zhang</strong>, et al  Towards Lightweight Deep Reference Frame for Versatile Video Coding VCIP 2023</p>
-</li>
-<li>
-<p>Chengzhuo Gui, <strong>Yuantong Zhang</strong>, Weijie Bao, Zhenzhong Chen, Huairui Wang and Shan Liu   Deep Reference Frame for Versatile Video Coding with Structural Re-parameterization VCIP 2024</p>
-</li>
-<li>
-<p>Yifei Long, <strong>Yuantong Zhang</strong>, Daiqin Yang, Zhenzhong Chen, Huairui Wang, Shan Liu  Lightweight Arbitrary-Scale Super-Resolution of Remote Sensing Images via Super-Scale Feature VCIP 2024</p>
-</li>
-<li>
-<p>Jie Yang, <strong>Yuantong Zhang</strong>, Zhenzhong Chen and Daiqin Yang  An illumination-guided dual-domain network for image exposure correction JVCIR 2024</p>
-</li>
+<li><strong>NTIRE 2026 Video Frame Interpolation Challenge</strong>: Technical lead of the first-place solution in both Track 1 and Track 2.</li>
+<li><strong>Space-Time Video Super-Resolution</strong>: Research on fixed-ratio, arbitrary-time, and continuous space-time video enhancement.</li>
+<li><strong>Image Preprocessing for Video Compression</strong>: Research and deployment for pre-processing methods in streaming and transcoding scenarios.</li>
+<li><strong>Video Enhancement for Live Streaming</strong>: Lightweight video super-resolution and low-light enhancement for live streaming applications.</li>
+<li><strong>Lightweight End-to-End Image Compression</strong>: Efficient learned image compression for extremely low bitrate scenarios and competition-level evaluation.</li>
 </ul>
-<h3 id="proposals">Proposals</h3>
+<hr />
+<h2 id="publications">Publications</h2>
+<h3 id="journal-papers">Journal Papers</h3>
+<ol>
+<li><strong>Yuantong Zhang</strong>, Hanyou Zheng, Daiqin Yang, Zhenzhong Chen, Haichuan Ma, Wenpeng Ding. <em>Space-Time Video Super-resolution with Neural Operator</em>. <strong>IEEE Transactions on Image Processing</strong>, 2025.</li>
+<li>Weijie Bao, <strong>Yuantong Zhang</strong>, Jianghao Jia, Zhenzhong Chen, Shan Liu. <em>Joint Reference Frame Synthesis and Post Filter Enhancement for Versatile Video Coding</em>. <strong>Journal of Visual Communication and Image Representation</strong>, 2025.</li>
+<li><strong>Yuantong Zhang</strong>, Baoxin Teng, Daiqin Yang, Zhenzhong Chen, Haichuan Ma, Gang Li, Wenpeng Ding. <em>Learning a Single Convolutional Layer Model for Low Light Image Enhancement</em>. <strong>IEEE Transactions on Circuits and Systems for Video Technology</strong>, 34(7): 5995-6008, 2024.</li>
+<li><strong>Yuantong Zhang</strong>, Daiqin Yang, Zhenzhong Chen, Wenpeng Ding. <em>Continuous Space-Time Video Super-Resolution with Multi-stage Motion Information Reorganization</em>. <strong>ACM Transactions on Multimedia Computing, Communications, and Applications</strong>, 2024.</li>
+<li>Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu. <em>Deep Reference Frame Generation Method for VVC Inter Prediction Enhancement</em>. <strong>IEEE Transactions on Circuits and Systems for Video Technology</strong>, 34(5): 3111-3124, 2024.</li>
+<li>Jie Yang, <strong>Yuantong Zhang</strong>, Zhenzhong Chen, Daiqin Yang. <em>An Illumination-Guided Dual-Domain Network for Image Exposure Correction</em>. <strong>Journal of Visual Communication and Image Representation</strong>, 2024.</li>
+<li><strong>Yuantong Zhang</strong>, Huairui Wang, Han Zhu, Zhenzhong Chen. <em>Optical Flow Reusing for High-Efficiency Space-Time Video Super Resolution</em>. <strong>IEEE Transactions on Circuits and Systems for Video Technology</strong>, 33(5): 2116-2128, 2023.</li>
+</ol>
+<h3 id="conference-papers">Conference Papers</h3>
+<ol>
+<li><strong>Yuantong Zhang</strong>, Zhenzhong Chen. <em>Continuous Space-Time Video Resampling with Invertible Motion Steganography</em>. <strong>CVPR</strong>, 2025.</li>
+<li>Chengzhuo Gui, <strong>Yuantong Zhang</strong>, Weijie Bao, Zhenzhong Chen, Huairui Wang, Shan Liu. <em>Deep Reference Frame for Versatile Video Coding with Structural Re-parameterization</em>. <strong>VCIP</strong>, 2024.</li>
+<li>Yifei Long, <strong>Yuantong Zhang</strong>, Daiqin Yang, Zhenzhong Chen, Huairui Wang, Shan Liu. <em>Lightweight Arbitrary-Scale Super-Resolution of Remote Sensing Images via Super-Scale Feature</em>. <strong>VCIP</strong>, 2024.</li>
+<li><strong>Yuantong Zhang</strong>, Nianxiang Fu, Guo Yu, Xiangdong Lv, Huairui Wang, Zhenzhong Chen. <em>Learned Image Compression with Enhanced Dynamic Spatial Aggregation and Asymmetric Entropy Model</em>. <strong>VCIP</strong>, 2023.</li>
+<li>Jie Yang, <strong>Yuantong Zhang</strong>, Daiqin Yang, Zhenzhong Chen. <em>An Efficient Method for Real-Time Image Exposure Correction</em>. <strong>VCIP</strong>, 2023.</li>
+<li>Wenhui Meng, <strong>Yuantong Zhang</strong>, Jianghao Jia, Songtao Chao, Zhenzhong Chen. <em>Towards Lightweight Deep Reference Frame for Versatile Video Coding</em>. <strong>VCIP</strong>, 2023.</li>
+<li><strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen. <em>Controllable Space-Time Video Super-Resolution via Enhanced Bidirectional Flow Warping</em>. <strong>VCIP</strong>, 2022.</li>
+</ol>
+<hr />
+<h2 id="awards-and-honors">Awards and Honors</h2>
 <ul>
-<li>
-<p>ISO/IEC JTC 1/SC29/WG1 M96051  Learning-based Image Compression Response to the JPEG AI Call for Proposals Ding Ding, Xiaozhong Xu, Shan Liu, Han Zhu, <strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen</p>
-</li>
-<li>
-<p>ISO/IEC JTC 1/SC29/WG1 M96050  Task-driven end-to-end image compression Response to the JPEG AI Call for Proposals  Ding Ding, Xiaozhong Xu, Shan Liu, Han Zhu, <strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen</p>
-</li>
-<li>
-<p>JVET-AB0114  AHG11: Deep Reference Frame Generation for Inter Prediction Enhancement  Jianghao Jia,<strong>Yuantong Zhang</strong>,Han Zhu,Zhenzhong Chen,Zizheng Liu,Liqiang Wang,Xiaozhong Xu,Shan Liu</p>
-</li>
-<li>
-<p>JVET-AC0114  AHG11: Deep Reference Frame Generation for Inter Prediction Enhancement Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu</p>
-</li>
-<li>
-<p>JVET-AD0160 EE1-2.1: Deep Reference Frame Generation for Inter Prediction Enhancement Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu</p>
-</li>
-<li>
-<p>Weijie Bao, Xin Chen, Jianghao Jia, <strong>Yuantong Zhang</strong>, Z. Chen, Z. Liu, X. Xu, and S. Liu, “EE1-2.1: Deep Reference Frame Generation for Inter Prediction Enhancement,” JVET-AF0208, Oct. 2023.</p>
-</li>
-<li>
-<p>Weijie Bao, Wenhui Meng, Jianghao Jia, <strong>Yuantong Zhang</strong>, H. Wang, Z. Chen, Z. Liu, X. Xu, and S. Liu, “EE1-5.1: Deep Reference Frame Generation for Inter Prediction Enhancement,” JVET-AE0112, July 2023.</p>
-</li>
+<li><strong>2026</strong>: First Prize of Wang Zhizhuo Innovation Talent Award (王之卓创新人才一等奖)</li>
+<li><strong>2026</strong>: First Place in High FPS Video Frame Interpolation Track 1 and Track 2, CVPR Workshop</li>
+<li><strong>2026</strong>: Second Place in Real-World Mobile Super-Resolution, CVPR Workshop</li>
+<li>First Prize in the "AI + Image Coding" Track, 5th National Artificial Intelligence Competition (第五届全国人工智能大赛 “AI+图像编码”赛道一等奖，第一名)</li>
+<li><strong>2023 - 2024</strong>: Lei Jun Scholarship (雷军腾飞奖学金)</li>
+<li><strong>2023 - 2024</strong>: First-Class Excellent Academic Scholarship (一等优秀学业奖学金)</li>
+<li><strong>2022 - 2023</strong>: Lei Jun Scholarship (雷军腾飞奖学金)</li>
+<li><strong>2022</strong>: Advanced Individual in the China Graduate Innovation Practice Series Competition (中国研究生创新实践系列大赛先进个人)</li>
+<li><strong>2021 - 2022</strong>: First-Class Excellent Academic Scholarship (一等优秀学业奖学金)</li>
+<li><strong>2021</strong>: Second Prize, China Graduate Mathematical Contest in Modeling (研究生数学建模大赛二等奖)</li>
 </ul>
-<h3 id="patents">Patents</h3>
+<h2 id="standards-and-technical-contributions">Standards and Technical Contributions</h2>
 <ul>
-<li>
-<p>A Real-Time Pedestrian Detection Method Using Background Modeling for Data Enhancement (一种利用背景建模增强数据的实时行人检测方法)</p>
-</li>
-<li>
-<p>A Cloud-Based Cooperative Adaptive Image Super-Resolution Method (一种基于云端协同的自适应图像超分方法)</p>
-</li>
-<li>
-<p>A Cloud-Based Cooperative Low-Light Enhancement Method for RTC Live Streaming Scenarios (一种面向RTC直播场景的云端协同图像暗光增强方法)</p>
-</li>
+<li>Weijie Bao, Yucong Cai, <strong>Yuantong Zhang</strong>, Zhenzhong Chen. <em>AHG14: The Extension of SADL Library</em>, <strong>JVET-AF0236</strong> (采纳).</li>
+<li>Ding Ding, Xiaozhong Xu, Shan Liu, Han Zhu, <strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen. <em>Learning-based Image Compression Response to the JPEG AI Call for Proposals</em>, <strong>ISO/IEC JTC 1/SC29/WG1 M96051</strong>.</li>
+<li>Ding Ding, Xiaozhong Xu, Shan Liu, Han Zhu, <strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen. <em>Task-driven End-to-End Image Compression Response to the JPEG AI Call for Proposals</em>, <strong>ISO/IEC JTC 1/SC29/WG1 M96050</strong>.</li>
+<li>Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Liqiang Wang, Xiaozhong Xu, Shan Liu. <em>AHG11: Deep Reference Frame Generation for Inter Prediction Enhancement</em>, <strong>JVET-AB0114</strong>.</li>
+<li>Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu. <em>AHG11: Deep Reference Frame Generation for Inter Prediction Enhancement</em>, <strong>JVET-AC0114</strong>.</li>
+<li>Jianghao Jia, <strong>Yuantong Zhang</strong>, Han Zhu, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu. <em>EE1-2.1: Deep Reference Frame Generation for Inter Prediction Enhancement</em>, <strong>JVET-AD0160</strong>.</li>
+<li>Weijie Bao, Wenhui Meng, Jianghao Jia, <strong>Yuantong Zhang</strong>, Huairui Wang, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu. <em>EE1-5.1: Deep Reference Frame Generation for Inter Prediction Enhancement</em>, <strong>JVET-AE0112</strong>.</li>
+<li>Weijie Bao, Xin Chen, Jianghao Jia, <strong>Yuantong Zhang</strong>, Zhenzhong Chen, Zizheng Liu, Xiaozhong Xu, Shan Liu. <em>EE1-2.1: Deep Reference Frame Generation for Inter Prediction Enhancement</em>, <strong>JVET-AF0208</strong>.</li>
 </ul>
-<h3 id="honors">Honors</h3>
+<h2 id="patents">Patents</h2>
 <ul>
-<li>
-<p>2021: Advanced Individual in the China Graduate Innovation Practice Series Competition (中国研究生创新实践系列大赛先进个人)</p>
-</li>
-<li>
-<p>2021 - 2022 First-Class Excellent Academic Scholarship (一等优秀学业奖学金)</p>
-</li>
-<li>
-<p>2022 - 2023 Lei Jun  Scholarship (雷军腾飞奖学金)</p>
-</li>
-<li>
-<p>2023 - 2024 First-Class Excellent Academic Scholarship (一等优秀学业奖学金)</p>
-</li>
-<li>
-<p>2023 - 2024 Lei Jun  Scholarship (雷军腾飞奖学金)</p>
-</li>
+<li>A Real-Time Pedestrian Detection Method Using Background Modeling for Data Enhancement (一种利用背景建模增强数据的实时行人检测方法)</li>
 </ul></div>
             </div>
         </div>
@@ -238,22 +199,23 @@ Deep Reference Frame Generation Method for VVC Inter Prediction Enhancement.  IE
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="javascripts/mathjax.js" defer></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="js/base.js"></script>
+        <script src="javascripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -273,7 +235,7 @@ Deep Reference Frame Generation Method for VVC Inter Prediction Enhancement.  IE
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -313,6 +275,6 @@ Deep Reference Frame Generation Method for VVC Inter Prediction Enhancement.  IE
 </html>
 
 <!--
-MkDocs version : 1.4.3
-Build Date UTC : 2026-04-20 09:14:57.733528+00:00
+MkDocs version : 1.6.1
+Build Date UTC : 2026-04-20 12:25:07.547914+00:00
 -->
